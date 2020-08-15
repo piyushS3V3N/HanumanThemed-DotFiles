@@ -1,0 +1,59 @@
+#!/bin/sh
+sxhkd &
+#lxpolkit &
+#~/.local/bin/launch_polybar &
+
+#nitrogen --restore &
+# If refreshing bspwm, remove all previous rules to prevent doubling up.
+bspc rule -r "*"
+
+#xsetroot -cursor_name left_ptr
+
+# We look for a non-laptop monitor to use for default, but use the laptop
+# screen (LVDS) if there's nothing else. This is because I assume that if you
+# have an extra screen attached to a laptop, you want to use that.
+mainmonitor="$(bspc query --monitors --names | grep -v LVDS | head -n 1)"
+
+
+# Start workspaces on the main monitor.
+bspc monitor "$mainmonitor" -d 1 2 3 4 5 6 7 8 9 10
+bspc desktop -f 1
+
+# If you want a multi-monitor display or something else, I leave that to you to
+# arrange. I have this sensible default for most people's use cases.
+
+bspc config border_width 1
+bspc config window_gap 15
+bspc config top_padding 24	# top_padding I set equal to polybar's height
+bspc config focus_follows_pointer true
+
+bspc rule -a screenkey --unmanage
+bspc rule -a Pamac-manager state=floating center=true
+bspc rule -a Lxappearance state=floating center=true
+bspc rule -a gmrun state=floating center=true
+
+#bspc rule -a urxvt state=floating center=true
+bspc rule -a viewnior state=floating center=true
+bspc rule -a file-roller state=floating center=true
+bspc rule -a floaterm state=floating center=true
+bspc rule -a MEGAsync state=floating
+
+
+bspc rule -a file-roller state=pseudo_tiled
+bspc rule -a transmission-gtk state=pseudo_tiled
+bspc rule -a conky sticky=on manage=off lower=on
+bspc rule -a yad state=floating
+
+bspc rule -a Nitrogen state=floating
+
+
+
+bspc rule -a google-chrome-stable private=on
+
+
+
+bspc rule -a libreoffice state=tiled
+bspc rule -a '*:libreofficedev' state=tiled
+bspc rule -a '*:soffice' state=tied
+
+bspwmbar &

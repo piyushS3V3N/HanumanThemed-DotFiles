@@ -1,0 +1,114 @@
+
+! URxvt
+URxvt.font:                   xft:Source Code Pro:size=10:antialias=true:hinting=true,xft:FontAwesome:pixelsize=10, xft:JoyPixels:size=10
+URxvt.url-launcher:           /usr/bin/xdg-open
+URxvt.matcher.pattern.1:      \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+URxvt.matcher.pattern.2:      \\B(/\\S+?):(\\d+)(?=:|$)
+URxvt.matcher.button:         1
+URxvt.scrollBar:              false
+URxvt.termName:               xterm-256color
+URxvt.saveLines:              10000
+URxvt.inheritPixmap:          true
+URxvt.clipboard.autocopy:     true
+URxvt.perl-ext-common:        default,selection-to-clipboard,pasta,matcher,keyboard-select,resize-font,font,clipboard
+URxvt.keysym.M-u:             perl:url-select:select_next
+URxvt.keysym.Shift-Control-C:   perl:clipboard:copy
+URxvt.keysym.Shift-Control-V:   perl:clipboard:paste
+URxvt.buffered:               true
+URxvt.jumpScroll:             false
+URxvt.scrollTtyKeypress:      true
+URxvt.scrollTtyOutput:        false
+URxvt.scrollWithBuffer:       false
+URxvt.scrollstyle:            plain
+URxvt.secondaryScroll:        false
+URxvt.xftAntialias:           true
+URxvt.matcher.rend.0:         Bold fg6
+URxvt.cursorBlink:            false
+URxvt.cursorColor:            #5f8fff
+URxvt.mapAlert:               true
+URxvt.pointerBlank:           true
+URxvt.resource:               value
+URxvt.iso14755:               false
+URxvt.iso14755_52:            false
+!URxvt.transparent:	      true
+!URxvt.shading:		      5
+
+! special
+*.foreground:   #9da3b0
+*.background:   #282c34
+*.cursorColor:  #dcdfe4
+
+! black
+*.color0:       #282c34
+*.color8:       #282c34
+
+! red
+*.color1:       #e06c75
+*.color9:       #e06c75
+
+! green
+*.color2:       #98c379
+*.color10:      #98c379
+
+! yellow
+*.color3:       #e5c07b
+*.color11:      #e5c07b
+! blue
+*.color4:       #61afef
+*.color12:      #61afef
+
+! magenta
+*.color5:       #c678dd
+*.color13:      #c678dd
+! cyan
+*.color6:       #56b6c2
+*.color14:      #56b6c2
+
+! white
+*.color7:       #dcdfe4
+*.color15:      #dcdfe4
+/bin/bash: special: cemmand not found
+xterm*VT100*geometry:         60x40
+xterm*faceName:               xft:xos4 Source Code Pro:size=10:antialias=true
+xterm*faceSize:               12
+xterm*renderFont:             true
+xterm*utf8:                   always
+xterm*utf8Title:              true
+xterm*locale:                 true
+xterm*cursorColor:            #5f5faf
+xterm*cursorBlink:            false
+xterm*selectToClipboard:      true
+xterm*SaveLines:              10000
+xterm*transparent:            true
+XTerm*trimSelection:          true
+XTerm*cutNewline:             false
+XTerm*highlightSelection:     true
+
+! cursor
+!Xcursor.theme:                Chameleon-Pearl-Small-0.5
+!xcursor.size:                 14
+
+! xft
+xft.antialias:                true
+
+
+
+! ------------------------------------------------------------------------------
+! Rofi configs
+! ------------------------------------------------------------------------------
+
+rofi.color-enabled: true
+rofi.color-window: #2e3440, #2e3440, #2e3440
+rofi.color-normal: #2e3440, #d8dee9, #2e3440, #2e3440, #bf616a
+rofi.color-active: #2e3440, #b48ead, #2e3440, #2e3440, #93e5cc
+rofi.color-urgent: #2e3440, #ebcb8b, #2e3440, #2e3440, #ebcb8b
+rofi.modi: run,drun,window
+
+! ------------------------------------------------------------------------------
+! Dmenu configs
+! ------------------------------------------------------------------------------
+
+dmenu.selforeground:	    #d8dee9
+dmenu.background:	        #2e3440
+dmenu.selbackground:	    #bf616a
+dmenu.foreground:	        #d8dee9

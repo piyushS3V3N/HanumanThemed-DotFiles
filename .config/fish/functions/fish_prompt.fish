@@ -1,0 +1,1 @@
+/home/p1k4l/.local/share/omf/themes/batman/fish_prompt.fish
